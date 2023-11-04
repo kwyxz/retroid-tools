@@ -30,8 +30,8 @@ for game in root.findall('game'):
     else:
         game_list[name] = rom
 
-for gamename, romname in dups.items():
+for gamename, romname in sorted(dups.items()):
     print(f"=== GAME : {gamename}")
     for romfile in romname:
-        print(f" ROM : {romfile}")
+        print(f" \"{romfile}\"")
 
